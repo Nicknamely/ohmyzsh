@@ -176,6 +176,12 @@ if (( $+commands[yay] )); then
   alias yaupd="yay -Sy"
 fi
 
+if (( $+commands[paru] )); then
+  alias parupg='paru -Syu'
+  alias parin='paru -S'
+  alias parm='paru -Rns'
+fi
+
 # Check Arch Linux PGP Keyring before System Upgrade to prevent failure.
 function upgrade() {
   echo ":: Checking Arch Linux PGP Keyring..."
